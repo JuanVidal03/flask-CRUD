@@ -6,16 +6,19 @@
     <title>Agregar personas</title>
     <!-- css -->
     <link rel="stylesheet" href="../static/css/styles.css">
-    <link rel="stylesheet" href="../static/addPersona.css">
+    <link rel="stylesheet" href="../static/css/addPersona.css">
 </head>
 <body>
     
-    <form action="" method="post">
-        <input type="text" placeholder="Nombre">
-        <input type="text" placeholder="Correo Electronico">
-        <input type="text" placeholder="Telefono">
-        <button type="button" value="add">Agregar</button>
+    <form action="/persona" method="post">
+        <input type="text" name="id" placeholder="Cedula">
+        <input type="text" name="nombre" placeholder="Nombre">
+        <input type="text" name="mail" placeholder="Correo Electronico">
+        <input type="text" name="telefono" placeholder="Telefono">
+        <button type="submit" value="add">Agregar</button>
     </form>
+    <a href="/personas-registradas">ver personas</a>
+    <p>{{mensaje}}</p>
 
 </body>
 </html>
