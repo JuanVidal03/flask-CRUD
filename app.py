@@ -7,14 +7,12 @@ app = Flask(__name__)
 lista_personas = []
 
 # mostrar formulario para agregar persona
-
-@app.route('/persona')
+@app.route('/personas')
 def render_form_persona():
     return render_template("add_person.html")
-
  
 # guardando los datos de la persona en la lista
-@app.route('/persona', methods=['POST'])
+@app.route('/personas', methods=['POST'])
 def add_persona():
     # verificando si hay algun envio de datos
     if request.method == 'POST':
@@ -38,6 +36,32 @@ def add_persona():
 def render_personas():
     return render_template("show_person.html", personas=lista_personas)
 
+
+def persona_id():
+    for persona in lista_personas:
+        print(persona)
+
+# editando persona por id
+@app.route('/editar-persona/<id>')
+def edit_person(id):
+    # obteniendo el id de la persona a actualizar
+    cedula = id
+    print(cedula)
+    persona_id()
+        
+    # verificando si hay una actualizacion de datos
+    if request.method == 'PUT':
+        # obteniendo datos del formulario
+        cedula = request.form["cedula"]
+        nombre = request.form["nombre"]
+        mail = request.form["mail"]
+        telefono = request.form["telefono"]
+        
+        
+        return render_template("update_person.html", mensaje="Persona encontrada")
+    # en caso de no encontrar la persona
+    else:
+        return render_template("update_person.html", mensaje="No fue encontrada la persona!")
 
 # corriendo server
 if __name__ == '__main__':

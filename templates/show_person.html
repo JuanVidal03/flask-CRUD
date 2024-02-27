@@ -20,6 +20,7 @@
                         <th>Nombre</th>
                         <th>Correo Electronico</th>
                         <th>Telefono</th>
+                        <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -30,6 +31,12 @@
                             <td>{{persona["nombre"]}}</td>
                             <td>{{persona["mail"]}}</td>
                             <td>{{persona["telefono"]}}</td>
+                            <td>
+                                <div class="actions-btn-container">
+                                    <a class="action-btn update-btn" href="/editar-persona/{{persona['id']}}">Actualizar</a>
+                                    <a class="action-btn delete-btn" href="">Eliminar</a>
+                                </div>
+                            </td>
                         </tr>
                     {% endfor %}
                 </tbody>

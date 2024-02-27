@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar persona</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/addPersona.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+
+    <div class="title-container">
+        <h1>Actualizar persona!</h1>
+    </div>
+    <!-- contenedor del formulario -->
+    <div class="form-container">
+        <form action="/editar-persona/" method="post"  class="form">
+            <!-- <input class="form-input" type="text" name="cedula" placeholder="Cedula" required autocomplete="false"> -->
+            <input class="form-input" type="text" name="nombre" placeholder="Nombre">
+            <input class="form-input" type="email" name="mail" placeholder="Correo Electronico">
+            <input class="form-input" type="text" name="telefono" placeholder="Telefono">
+            <div class="form-btn-container">
+                <button class="btn-submit" type="submit">Actualizar</button>
+                <a class="btn-submit" href="/personas-registradas">ver personas</a>
+            </div>
+        </form>
+    </div>
+    <div class="mensaje-exito-container">
+        <p class="mensaje-exito">{{mensaje}}</p>
+    </div>
+
+</body>
+</html>
