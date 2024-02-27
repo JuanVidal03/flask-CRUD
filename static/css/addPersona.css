@@ -1,0 +1,103 @@
+.mensaje-exito{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+.mensaje-exito-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 2rem;
+}
+.btn-submit:hover::after{
+    left: 0;
+}
+.btn-submit::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    top: 0;
+    transition: all ease-out .3s;
+    background-color: green;
+    z-index: -1;
+}
+.btn-submit{
+    padding: 1rem 2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all ease .3s;
+    background-color: rgb(19, 183, 19);
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    margin-top: .5rem;
+    font-size: 1rem;
+    position: relative;
+    transition: all ease-out .3s;
+    z-index: 2;
+    overflow: hidden;
+}
+.form-input:focus{
+    outline: none;
+}
+.form-input{
+    width: 30%;
+    padding: 1rem;
+    transition: all ease .3s;
+    border-radius: 10px;
+    border: none;
+    background-color: #f2f2f2;
+}
+.form{
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.form-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+.title-container h1::after{
+    position: absolute;
+    content: "";
+    width: 40%;
+    height: 3px;
+    background-color: red;
+    top: 110%;
+    left: 30%;
+}
+.title-container h1{
+    font-size: 3rem;
+    position: relative;
+}
+.title-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3em;
+}
+.form-btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.form-btn-container a{
+    text-decoration: none;
+    background-color: blue;
+}
+.form-btn-container a::after{
+    background-color: rgb(25, 25, 195);
+}
