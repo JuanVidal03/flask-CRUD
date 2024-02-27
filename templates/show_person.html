@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personas registradas</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/showPerson.css">
+</head>
+<body>
+    <div class="contenedor">
+        <!-- verificando si hay elementos en la lista -->
+        {% if personas|length > 0 %}
+        <h1 class="show-title">Personas registradas!</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Correo Electronico</th>
+                        <th>Telefono</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- mostrando las personas que hay en el array de lita personas -->
+                    {% for persona in personas %}
+                        <tr>
+                            <td>{{persona["id"]}}</td>
+                            <td>{{persona["nombre"]}}</td>
+                            <td>{{persona["mail"]}}</td>
+                            <td>{{persona["telefono"]}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+        {% else %}
+            <h1 class="no-registro">No hay personas registradas :(</h1>
+        {% endif %}
+        <div class="form-btn-container">
+            <a class="btn-submit" href="/personas">Registrar Persona</a>
+        </div>
+    </div>
+</body>
+</html>

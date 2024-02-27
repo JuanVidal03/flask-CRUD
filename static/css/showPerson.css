@@ -1,0 +1,56 @@
+.contenedor{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+table{
+    width: 100%;
+    max-width: 1000px;
+}
+
+table, th, td{
+    border: solid 1px #000;
+    border-collapse: collapse;
+}
+
+th, td{
+    padding: .5rem;
+    text-align: center;
+}
+
+th{
+    background-color: rgb(55, 55, 193);
+    color: #fff;
+}
+
+.btn-submit:hover{
+    left: 0;
+    background-color: green;
+}
+.btn-submit{
+    text-decoration: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all ease .3s;
+    background-color: rgb(19, 183, 19);
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    margin-top: .5rem;
+    font-size: 1rem;
+    position: relative;
+    transition: all ease-out .3s;
+    z-index: 2;
+    overflow: hidden !important;
+}
+.form-btn-container{
+    margin-top:3rem;
+}
+.show-title{
+    margin-bottom: 2rem;
+}
