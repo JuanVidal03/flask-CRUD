@@ -16,11 +16,11 @@
     </div>
     <!-- contenedor del formulario -->
     <div class="form-container">
-        <form action="/editar-persona/" method="post"  class="form">
-            <!-- <input class="form-input" type="text" name="cedula" placeholder="Cedula" required autocomplete="false"> -->
-            <input class="form-input" type="text" name="nombre" placeholder="Nombre">
-            <input class="form-input" type="email" name="mail" placeholder="Correo Electronico">
-            <input class="form-input" type="text" name="telefono" placeholder="Telefono">
+        <form action="/editar-persona/{{persona['id']}}" method="post"  class="form">
+            <input class="form-input hide-input" type="text" name="cedula" placeholder="Cedula" required autocomplete="false" value="{{persona['id']}}">
+            <input class="form-input" type="text" name="nombre" placeholder="Nombre" value="{{persona['nombre']}}">
+            <input class="form-input" type="email" name="mail" placeholder="Correo Electronico" value="{{persona['mail']}}">
+            <input class="form-input" type="text" name="telefono" placeholder="Telefono" value="{{persona['telefono']}}">
             <div class="form-btn-container">
                 <button class="btn-submit" type="submit">Actualizar</button>
                 <a class="btn-submit" href="/personas-registradas">ver personas</a>

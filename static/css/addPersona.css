@@ -101,3 +101,7 @@
 .form-btn-container a::after{
     background-color: rgb(25, 25, 195);
 }
+
+.hide-input{
+    display: none;
+}
