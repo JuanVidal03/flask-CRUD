@@ -30,10 +30,22 @@ def add_persona():
     else:
         return render_template("add_person.html", mensaje="Error al agregar la persona!")
 
-# mostar las personas registradas
+# mostar o eliminar las personas registradas
 @app.route('/personas-registradas')
 def render_personas():
-    return render_template("show_person.html", personas=lista_personas)
+    # obteniendo el id desde argumento
+    id_person = request.args.get("id")
+    # verificando si en la url esta el qury param
+    if id_person:
+        # eliminar la persona
+        for person in lista_personas:
+            if person["id"] == id_person:
+                lista_personas.remove(person)
+                
+        return redirect("/personas-registradas")
+    # mostrar las personas registradas
+    else:
+        return render_template("show_person.html", personas=lista_personas)
 
 # renderizando el form de actalizar persona
 @app.route('/editar-persona/<id>')
